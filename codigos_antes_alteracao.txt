@@ -1,0 +1,26 @@
+document.getElementById("Form_cadastro").addEventListener('submit',async function(e) {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value;
+    const senha = document.getElementById('senha').value;
+
+    await fetch('http://localhost:3000/envia/nome_senha',{
+        method:'POST',
+        headers: {
+            'Content-Type':'application/json'
+        },
+        
+        body: JSON.stringify({nome,senha}),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if(data.error){
+            alert("Usuário já cadastrado");
+        }else{
+            alert(`mensagem da API => Error: ${data.error} - Nome: ${data.nome} - Senha: ${data.senhahash}`);
+        }
+    })
+    .catch(error => {
+        console.error("não foi possível enviar o nome e a senha: ",error);
+    });
+})  

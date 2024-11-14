@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="icon" href="/assets/aa7a21ff-dc7d-46a0-9f9c-4c4ef749b594.jfif">
+    <style>
+        a{
+            text-decoration: none;
+            transition: color 5s;
+        }
+
+        input:hover{
+            background-color: rgb(246, 251, 255);
+            border-radius: 3px;
+        }
+        #button_cadastro{
+            color: rgb(246, 251, 255); 
+            background-color: rgb(48, 63, 90);
+        }
+
+        input#button_cadastro:hover{
+            background-color: rgb(246, 251, 255);
+            color: rgb(48, 63, 90);
+            box-shadow: 0px 3px 12px  rgb(145, 164, 179);
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        a:hover{
+            color: red;
+            text-decoration:underline;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body style="display: flex; align-items: center; justify-content: center; flex-direction: column; background-color: rgb(215, 222, 228);">
+
+    <div style="display: flex; align-items: center; justify-content: center; flex-direction: column; background-color: rgb(255, 255, 255);width:30%; margin-top: 50px; border-radius: 20px; border-style: solid;
+    border-width: 3px; border-color: rgb(174, 184, 194); box-shadow: 0px 8px 30px 6px rgba(0, 0, 0, 0.12); height: 500px;">
+        <h1 style="margin-top: 0%;">Bem vindo a tela de login</h1>
+        <div>
+            <fieldset style="width: 30%; margin-bottom: 15px; border-radius: 4px; font-size:larger;">
+                <legend>Tem cadastrado?</legend>
+                <form id="Form_login" style="display: flex; flex-direction: column;">
+                    <label for="text" style="margin-top: 5px;">Nome:</label>
+                    <input type="text" placeholder="Digite seu usuário" id="nome_login">
+
+                    <label for="text" style="margin-top: 15px;">Senha:</label>
+                    <input type="text" placeholder="Digite sua senha" id="senha_login">
+
+                    <hr style="border: none; border-top: 10px solid rgba(0, 0, 0, 0.5);">
+
+                    <div style="align-items: center; justify-content: center; text-align: center;">
+                        <input type="submit" value="Enviar" id="button_cadastro" style="height: 30px; font-size:large; font-weight:800; border-radius: 4px; width: 60%;">
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+
+        <h4 style="text-align: center; margin-top: 15px; font-size:large; margin-bottom: 0px;">
+            Ou, se não tiver cadastro<br> cadastre-se 
+            <a href="/src/homepage.html">
+                aqui
+            </a>
+        </h4>
+    </div>
+
+    <div id="div_login_incorreto"></div>
+
+</body>
+<script type="module" src="logining.js"></script>
+
+</html>

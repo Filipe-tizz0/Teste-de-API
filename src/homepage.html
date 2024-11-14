@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styly.css">
+    <title>Time to train</title>
+    <link rel="icon" href="/assets/aa7a21ff-dc7d-46a0-9f9c-4c4ef749b594.jfif">
+</head>
+
+<body>
+
+    <div class="coluna">
+        <h1 style="margin-top: 35px;">Home Page</h1>
+        <div id="div_login_incorreto"></div>
+
+        <form id="Form_cadastro">
+            <h3>Nome:</h3>
+            <input type="text" id="nome" placeholder="nome">
+            <h3>Senha:</h3>
+            <input type="text" id="senha" placeholder="senha">
+            <div>
+                <input type="submit" class="enviar" value="enviar">
+            </div>
+        </form>
+        <h3>Já está cadastrado?</h3>
+        <a href="/login/login.html">
+            <button id="entrar">Entrar</button>
+        </a>
+
+        <form id="calculo_media" style="padding: 0px;" class="calculo_media">
+            <h4>X:</h4>
+            <input type="text" id="x" />
+
+            <h4>Y:</h4>
+            <input type="text" id="y" />
+
+            <h4>Z:</h4>
+            <input type="text" id="z" />
+            <div><input type="submit" class="enviar"></div>
+
+        </form>
+        <div id="response_media">
+            <!--apresentar média-->
+        </div>
+
+        <!--div>
+            <button id="apresentar">apresentar nomes e ids</button>
+            <ul id="list-item"></ul>
+
+            <ul id="listagem"></ul>
+        </div-->
+
+        <div>
+            <button id="Users_button">apresentar usuários</button>
+        </div>
+        <div>
+            <table id="table_users">
+                <tr>
+                    <th>Nome:</th>
+                    <th>ID:</th>
+                </tr>
+            </table>
+        </div>
+
+        <button id="delete_users" style="position: fixed; margin-top: 5px;">Delete Users</button>
+
+    </div>
+
+</body>
+<script type="module" src="scripts.js"></script>
+
+</html>

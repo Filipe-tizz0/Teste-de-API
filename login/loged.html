@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logado</title>
+    <style>
+        #opc_acess {
+            top: -20px;
+            left: 0;
+            border-radius: 20px;
+            background-color: rgb(25, 35, 54);
+            color: rgb(246, 251, 255);
+            height: 60px;
+            position: fixed;
+            width: 100%;
+            text-align: center;
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .Options_dropdown {
+            margin-top: 40px;
+            margin-bottom: 25px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        h1 {
+            margin-top: 40px;
+            font-size: xxx-large;
+            margin-bottom: 0px;
+            color: rgb(25, 35, 54);
+            text-shadow: 0px 4px 12px rgba(90, 90, 90, 0.281);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            background-color: rgb(25, 35, 54);
+            color: rgb(246, 251, 255);
+            width: 250px;
+            padding-bottom: 10px;
+        }
+
+        #opc_acess:hover #dropdown {
+            display: block;
+            border-color: rgb(255, 255, 255);
+        }
+
+        #dropdown ul,
+        li {
+            list-style-type: none;
+            margin-left: 0%;
+            margin: 0%;
+            text-align: left;
+        }
+
+        #dropdown li {
+            left: 0px;
+            text-align: left;
+        }
+
+        #dropdown a {
+            color: rgb(246, 251, 255);
+            text-decoration: none;
+            font-size: large;
+            margin-left: 0%;
+        }
+
+        #dropdown a:hover {
+            color: rgb(183, 222, 253);
+            text-decoration: underline;
+            font-size: large;
+            margin-left: 0%;
+        }
+
+        #dropdown_content {
+            margin-left: 0%;
+        }
+
+        h3 {
+            margin-top: 0px;
+            font-size: large;
+            font-weight: normal;
+        }
+
+        #cadastro_de_produtos {
+            margin-top: 5%;
+            margin-left: 5%;
+            background-color: rgb(215, 222, 228);
+            border-width: 1px;
+            border-style: dashed;
+            width: 40%;
+            border-radius: 12px;
+            transition: background-color 0.3s;
+            height: 310px;
+        }
+
+        #listagem_produtos {
+            margin-left: 10%;
+            margin-top: 5%;
+            background-color: rgb(215, 222, 228);
+            border-width: 1px;
+            border-style: dashed;
+            width: 40%;
+            border-radius: 12px;
+            transition: background-color 0.3s;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #cadastro_de_produtos:hover {
+            background-color: rgb(196, 206, 215);
+        }
+
+        #listagem_produtos:hover {
+            background-color: rgb(196, 206, 215);
+        }
+
+        input {
+            border-radius: 6px;
+            background-color: rgb(228, 235, 241);
+        }
+
+        .form-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 5%;
+            gap: 10px;
+        }
+
+        .form-column input {
+            width: 80%;
+            margin-left: 10%;
+            font-size: larger;
+        }
+
+        .form-column label {
+            font-size: larger;
+            font-weight: bolder;
+        }
+
+        #submit_form_cad {
+            width: 30%;
+            margin-left: 34.7%;
+            margin-top: 10px;
+            transition: background-color 0.7s, color 0.3s, box-shadow 0.3s;
+            color: rgb(238, 242, 246);
+            background-color: rgb(48, 63, 90);
+            font-weight: bolder;
+        }
+
+        #submit_form_cad:hover {
+            background-color: rgb(238, 242, 246);
+            color: rgb(48, 63, 90);
+            box-shadow: 0px 3px 12px rgb(145, 164, 179);
+            cursor: pointer;
+        }
+
+        #table_prod {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 3%;
+            border-collapse: collapse;
+            background-color: rgb(233, 237, 242);
+            border-radius: 12px;
+            padding: 15px;
+        }
+
+        #table_prod th {
+            padding-right: 10px;
+            padding-left: 10px;
+            padding-top: 6px;
+        }
+
+        #atualizar_lista {
+            margin-top: 15px;
+            font-weight: bolder;
+            font-size: large;
+            width: 30%;
+            border-radius: 8px;
+            transition: background-color 0.2s;
+            background-color: rgb(243, 249, 253);
+            color: rgb(48, 63, 90);
+            cursor: pointer;
+        }
+
+        #atualizar_lista:active{
+            background-color: rgb(243, 249, 253);
+            box-shadow: 0px -3px 4px rgb(184, 193, 201) inset;
+        }
+    </style>
+    <link rel="icon" href="/assets/aa7a21ff-dc7d-46a0-9f9c-4c4ef749b594.jfif">
+</head>
+
+<body style="text-align: center; display: flex; flex-direction: column; background-color: rgb(215, 222, 228);">
+    <header style=" width: 100%;">
+        <div id="opc_acess" style="width: 20%;">
+            <h2 class="Options_dropdown">Opções de acesso</h2>
+            <div id="dropdown">
+                <ul id="dropdown_content">
+                    <li>
+                        <a href="login.html">Voltar à tela de login</a>
+                    </li>
+                    <li>
+                        <a href="/src/homepage.html">Voltar à tela de cadastro</a>
+                    </li>
+                    <li>
+                        <a href="login.html" id="link_logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div id="logado_sucesso" style="margin-bottom: 0%;"></div>
+    <h3 style="margin-top: 0%;">Você logou com Sucesso</h3>
+    <div style="display: flex;">
+        <div id="cadastro_de_produtos">
+            <h2 style="margin-bottom: 0%;">cadastro de Produtos</h2>
+            <hr style="border: none; border-top: 1px solid rgba(0, 0, 0, 0.26); margin-top: 20px;">
+            <form class="form-column" id="form_cad">
+                <label for="produto_nome">Nome do produto:</label>
+                <input type="text" id="produto_nome">
+
+                <label for="produto_ean">EAN do produto:</label>
+                <input type="text" id="produto_ean">
+
+                <input type="submit" id="submit_form_cad">
+            </form>
+            <div id="mensagem_cad"></div>
+        </div>
+        <div id="listagem_produtos" style="font-size: larger;">
+            <button id="atualizar_lista">Atualizar</button>
+            <div id="mensagem_list"></div>
+            <table id="table_prod"></table>
+        </div>
+    </div>
+
+</body>
+<script type="module" src="/login/scrpitws/scrpit_produtos.js"></script>
+
+</html>

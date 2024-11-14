@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.coluna{
+    align-items: center;
+    width: 70%;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    margin-top: 20px;
+    align-self: center;
+}
+
+.enviar{
+    margin-top: 20px;
+}
+
+.coluna h3, .coluna input, .coluna label{
+    margin-top: 10px; 
+    align-self: center; 
+}
+
+form{
+    margin-bottom: 20px;
+}
+
+.calculo_media h4, .coluna input{
+    margin-bottom: 10px;
+    margin-top: 0%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
